@@ -1,0 +1,12 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+input {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+}

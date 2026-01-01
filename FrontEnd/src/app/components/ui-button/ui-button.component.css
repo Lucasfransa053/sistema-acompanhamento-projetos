@@ -1,0 +1,29 @@
+button {
+  padding: 0.8rem 1.4rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.primary {
+  background: #2563eb;
+  color: white;
+}
+
+.secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.danger {
+  background: #dc2626;
+  color: white;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

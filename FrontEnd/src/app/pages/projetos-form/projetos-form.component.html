@@ -1,0 +1,35 @@
+<div class="form-page">
+  <form (ngSubmit)="salvar()">
+
+    <h2>{{ editando ? 'Editar Projeto' : 'Novo Projeto' }}</h2>
+
+
+    <app-ui-input
+      label="Nome do Projeto"
+      [(model)]="projeto.nome">
+    </app-ui-input>
+
+    <app-ui-input
+      label="Custo"
+      type="number"
+      [(model)]="projeto.custo">
+    </app-ui-input>
+
+    <!-- Status controlado -->
+    <div class="field">
+      <label>Status</label>
+      <select [(ngModel)]="projeto.status" name="status">
+        <option *ngFor="let s of statusOptions" [value]="s.value">
+          {{ s.label }}
+        </option>
+      </select>
+    </div>
+
+    <app-ui-button
+  [label]="editando ? 'Atualizar Projeto' : 'Salvar Projeto'"
+  type="primary">
+</app-ui-button>
+
+
+  </form>
+</div>

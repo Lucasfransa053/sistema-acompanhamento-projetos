@@ -1,0 +1,33 @@
+<div class="page">
+  <h2 class="titulo">Lista de Projetos</h2>
+
+  <div class="lista">
+    <div class="card" *ngFor="let projeto of projetos">
+      <h3>{{ projeto.nome }}</h3>
+
+      <p class="custo">
+        <strong>Custo:</strong>
+        {{ projeto.custo | currency:'BRL' }}
+      </p>
+
+      <span class="status" [ngClass]="projeto.status">
+        {{ projeto.status }}
+      </span>
+
+      <div class="acoes">
+  <a
+    class="btn-editar"
+    [routerLink]="['/editar-projeto', projeto.id]">
+    ✏️ Editar
+  </a>
+
+  <button
+    class="btn-excluir"
+    (click)="deletarProjeto(projeto.id!)">
+    🗑️ Excluir
+  </button>
+</div>
+
+    </div>
+  </div>
+</div>

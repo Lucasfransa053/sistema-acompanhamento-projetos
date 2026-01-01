@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #002f52 35%, #326589);
+  color: white;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* destaque para ação principal */
+nav a:last-child {
+  background: #ffffff;
+  color: #002f52;
+  font-weight: 600;
+}
+
+nav a:last-child:hover {
+  background: #f1f5f9;
+}
