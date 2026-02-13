@@ -1,8 +1,12 @@
 <div class="page">
   <h2 class="titulo">Lista de Projetos</h2>
+  <input type = "text" 
+  placeholder="buscar projetos.."
+  [(ngModel)]="termoBusca"
+  (input) = "filtrarProjeto()">
 
   <div class="lista">
-    <div class="card" *ngFor="let projeto of projetos">
+    <div class="card" *ngFor="let projeto of projetosFiltrados">
       <h3>{{ projeto.nome }}</h3>
 
       <p class="custo">
