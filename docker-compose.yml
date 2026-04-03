@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  # Serviço do Banco de Dados / API
+  backend:
+    build: ./BackEnd
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./BackEnd:/app
+      - /app/node_modules # Isso evita que o Docker sobrescreva os pacotes instalados
+
+  # Serviço da Interface
+  frontend:
+    build: ./FrontEnd
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./FrontEnd:/app
+      - /app/node_modules
+    depends_on:
+      - backend

@@ -1,9 +1,13 @@
 <div class="page">
   <h2 class="titulo">Lista de Projetos</h2>
-  <input type = "text" 
+  <app-ui-input
+  type = "text"
+  label = "Buscar Projetos" 
   placeholder="buscar projetos.."
-  [(ngModel)]="termoBusca"
-  (input) = "filtrarProjeto()">
+  [(model)]="termoBusca"
+  (modelChange)="filtrarProjeto()"
+  >
+  </app-ui-input>
 
   <div class="lista">
     <div class="card" *ngFor="let projeto of projetosFiltrados">

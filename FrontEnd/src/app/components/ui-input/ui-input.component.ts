@@ -13,6 +13,7 @@ export class UiInputComponent {
 
   @Input() label = '';
   @Input() type = 'text';
+  
 
   @Input() model: any;
   @Output() modelChange = new EventEmitter<any>();

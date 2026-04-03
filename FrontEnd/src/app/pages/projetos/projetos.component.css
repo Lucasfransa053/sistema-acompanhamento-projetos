@@ -125,3 +125,10 @@
   color: #991b1b;
   transform: translateY(-1px);
 }
+
+app-ui-input {
+  display: block;
+  margin-bottom: 20px;
+}
+
+

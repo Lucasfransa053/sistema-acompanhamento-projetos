@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ProjetosService } from '../../services/projetos.service';
+import { UiInputComponent } from '../../components/ui-input/ui-input.component';
 import { Projeto } from '../../models/projeto.model';
 
 @Component({
@@ -11,6 +12,7 @@ import { Projeto } from '../../models/projeto.model';
   imports: [
     CommonModule,
     RouterModule,
+    UiInputComponent,
     FormsModule
   ],
   templateUrl: './projetos.component.html',
